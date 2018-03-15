@@ -4,12 +4,14 @@
 
 from flask import Flask
 from login.login import login_bp
+from login.logout import logout_bp
 from ucenter.user import user_bp
 
 app = Flask(__name__)
 
 # 注册蓝图
 app.register_blueprint(login_bp)
+app.register_blueprint(logout_bp)
 app.register_blueprint(user_bp)
 
 @app.route('/')
