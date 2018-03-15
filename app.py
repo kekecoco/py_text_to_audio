@@ -2,9 +2,9 @@
 # @author Wu Lihua
 # @email maikekechn@gmail.com
 
-from flask import Flask, Blueprint
-from login import login_bp
-from ucenter import user_bp
+from flask import Flask
+from login.login import login_bp
+from ucenter.user import user_bp
 
 app = Flask(__name__)
 

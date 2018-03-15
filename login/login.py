@@ -6,6 +6,6 @@ from flask import Flask, Blueprint
 
 login_bp = Blueprint('login', __name__)
 
-@login_bp.route('/')
+@login_bp.route('/login')
 def index():
 	return '<h3>login</h3>'
