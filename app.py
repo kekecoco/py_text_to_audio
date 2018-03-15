@@ -3,8 +3,8 @@
 # @email maikekechn@gmail.com
 
 from flask import Flask
-from log.login import login_bp
-from log.logout import logout_bp
+from login.login import login_bp
+from login.logout import logout_bp
 from ucenter.user import user_bp
 
 app = Flask(__name__)
