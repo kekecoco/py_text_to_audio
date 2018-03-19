@@ -7,6 +7,7 @@ from db.mysql_client import Account
 
 login_bp = Blueprint('login', __name__)
 
+
 @login_bp.route('/login')
 
 
