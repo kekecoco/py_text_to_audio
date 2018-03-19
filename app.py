@@ -14,9 +14,11 @@ app.register_blueprint(login_bp)
 app.register_blueprint(logout_bp)
 app.register_blueprint(user_bp)
 
+
 @app.route('/')
 def index():
 	return 'index'
+
 
 if __name__ == '__main__':
 	app.run(host='127.0.0.1', port=8080, debug=True)

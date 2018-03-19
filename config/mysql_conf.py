@@ -11,6 +11,9 @@ def import_config():
 def get_sections_title():
 	return cf.sections()
 
+
+
+
 if __name__ == '__main__':
 	config_1 = {}
 	config_1['mysql'] = '127.0.0.1'

@@ -6,6 +6,7 @@ from flask import Blueprint
 
 login_bp = Blueprint('login', __name__)
 
+
 @login_bp.route('/login')
 def index():
 	return '<h3>登录</h3>'
