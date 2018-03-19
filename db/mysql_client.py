@@ -26,7 +26,7 @@ mysql_db = MySQLDatabase(database, user=username, password=password, host=hostna
 class BaseModel(Model):
     """A base model that will use our MySQL database"""
     class Meta:
-        database = mysql_db
+        database = mysql_db 
 
 
 class Account(BaseModel):
