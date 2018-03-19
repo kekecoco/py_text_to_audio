@@ -2,13 +2,8 @@
 # @author Wu Lihua
 # @email maikekechn@gmail.com
 
-import configparser
+from config.base_conf import import_config
 
-cf = configparser.ConfigParser()
 
-def importconfig():
-	return cf.read('./redis.conf', 'utf-8')
-
-if __name__ == '__main__':
-	importconfig()
-	print(cf['redis']['hostname'])
+def import_redis_config(app_conf_name):
+    return import_config('../config/redis.conf', app_conf_name)
