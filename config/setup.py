@@ -9,7 +9,7 @@ config_path = application_path + '/config'
 mysql_config_file = config_path + '/mysql.conf'
 redis_config_file = config_path + '/redis.conf'
 log_path = application_path + '/runtime/log'
-error_log_path = application_path + '/runtime/errorlog'
+error_log_path = application_path + '/runtime/error'
 
 
 # 配置文件初始化
