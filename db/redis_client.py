@@ -6,23 +6,21 @@ import redis
 from config import setup
 
 # redis连接
-def redis_connect():
-    redis_config = setup.get_sections(setup.redis_config_file, 'redis')
-    if not redis_config:
-        return False
+class redisclient:
 
-    try:
-        redis_conn = redis.StrictRedis(host=redis_config['hostname'], port=redis_config['port'])
-    except ConnectionAbortedError:
-        return False
-    else:
-        return redis_conn
+    redis_config = None
+    redis_conn = None
 
-def set(key, value):
-    pass
+    def __init__(self):
+        self.redis_config = setup.get_sections(setup.redis_config_file, 'redis')
 
-def get(key):
-    pass
+        try:
+            redis.StrictRedis(host=self.redis_config['hostname'], port=self.redis_config['port'])
+        except ConnectionAbortedError:
+            Exception("redis's connection is wrong")
+
+    def set(self, key, value):
+        redis.set(key, value)
 
 if __name__ == '__main__':
-    redis_connect()
+    pass
